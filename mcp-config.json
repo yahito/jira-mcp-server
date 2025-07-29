@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "jira-mcp-server": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-http-proxy", "http://localhost:8080/api/jira"],
+      "env": {
+        "JIRA_SERVER_URL": "http://localhost:8080/api/jira"
+      }
+    }
+  }
+}
