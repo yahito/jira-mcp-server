@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import logging
-from jira_config import JiraConfig
+from config import jira_config
 from jira_service import JiraService
 
 
@@ -18,8 +18,7 @@ def main():
     logger.info("Starting Jira MCP Server")
     
     # Initialize configuration and service
-    config = JiraConfig()
-    jira_service = JiraService(config)
+    jira_service = JiraService(jira_config)
     
     # Example usage
     try:

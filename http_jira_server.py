@@ -7,7 +7,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import JSONResponse
 import uvicorn
 
-from jira_config import JiraConfig
+from config import jira_config
 from jira_service import JiraService
 
 
@@ -16,8 +16,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("jira-http-server")
 
 # Initialize Jira service
-config = JiraConfig()
-jira_service = JiraService(config)
+jira_service = JiraService(jira_config)
 
 # Create FastAPI app
 app = FastAPI(

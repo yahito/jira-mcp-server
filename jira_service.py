@@ -3,7 +3,7 @@ from typing import List, Optional
 import requests
 from requests.auth import HTTPBasicAuth
 
-from jira_config import JiraConfig
+from config import jira_config, JiraConfig
 from jira_models import JiraTicket, Fields, Status, Priority, IssueType, User
 
 

@@ -12,7 +12,7 @@ from mcp.types import (
     Tool,
 )
 
-from jira_config import JiraConfig
+from config import jira_config
 from jira_service import JiraService
 
 
@@ -21,8 +21,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("jira-mcp-server")
 
 # Initialize Jira service
-config = JiraConfig()
-jira_service = JiraService(config)
+jira_service = JiraService(jira_config)
 
 # Create MCP server
 server = Server("jira-mcp-server")
